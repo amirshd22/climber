@@ -1,20 +1,20 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Blogs
+from django.shortcuts import render , get_object_or_404
+from .models import Blogs 
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger, InvalidPage
-# Create your views here.
+import random
 
-def blogs(request, blog_id):
+
+def bl(request, blog_id):
     ob1 = get_object_or_404(Blogs , pk=blog_id)
-    template = 'html/details.html'
+    template = 'details.html'
     context = {
         'key1':ob1,
     }
     return render(request ,template,context)
 
-
-def home(request):
-    blog = Blogs.objects.all()
-    paginator = Paginator(blog, 6)
+def homepage(request):
+    deli = Blogs.objects.all()
+    paginator = Paginator(deli, 6)
     try:
         page = int(request.GET.get('page', '1'))
     except:
@@ -25,10 +25,10 @@ def home(request):
         items = paginator.page(paginator.num_pages)
 
 
-
-    templates= 'home.html'
+    template = "home.html"
     context = {
-        'itmes':items,
+       
+        'items':items,
     }
 
-    return render(request, templates , context)
+    return render(request, template , context)

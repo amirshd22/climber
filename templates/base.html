@@ -1,14 +1,14 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="fa">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Need a Private Loan With Flexible Lending Criteria And Negotiable Terms?Need it Done Fast? MEF Money builder may be the Answer You Were Looking For!">
+    <meta name="description" content="Need a Private Loan With Flexible Lending Criteria And Negotiable Terms?Need it Done Fast? ایمن کلایمر may be the Answer You Were Looking For!">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>{{ key1.title }}</title>
+    <title>ایمن کلایمر</title>
     <link rel="icon" href="{% static 'logo.png' %}">
     <!-- Bootstrap core CSS -->
 
@@ -29,13 +29,7 @@
         }
       }
       #jump{
-        background-image: url('../../static/ionvest23.png');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      #bg{
-        background-image: url('{{ key1.img.url }}');
+        background-image: url('../../static/cl.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
@@ -75,7 +69,7 @@
   background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
     <div class="container d-flex justify-content-between">
-      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-dark">
+      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
          <img src="{% static 'logo.png' %}" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
       </a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,32 +78,14 @@
     </div>
   </div>
 </header>
+<main  role="main">
+<br>
+{% block content %}
 
-<main>
-    <div class="jumbotron" id='bg'>
-        <div class="container">
-          <h1 class="display-3 text-white">MEF MONEY BUILDER</h1>
-          <p>MEF is here to give you the news of mortgage invesments and more so dont go anywhere</p>
-          <p><a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Back to Home Page &raquo;</a></p>
-        </div>
-      </div>
-      <div class="container">
-      <div class="blog-post">
-        <h2 class="blog-post-title">{{ key1.title }}</h2>
-        <div class="blog-post-meta">{{ key1.text }}</div>
-      </div>
-    </div>
-    {% for i in key1.all %}
-    <div class="p-4">
-        <h4 class="font-italic">Blog</h4>
-        <ol class="list-unstyled mb-0">
-          <li><a href="{% url 'blogs' i.id %}">{{ i.title }}</a></li>
-    
-        </ol>
-      </div>
-      {% endfor %}
+
+{% endblock %}
+<br>
 </main>
-
 <footer class="container py-5">
     <div class="container">
       <p class="float-right">
@@ -153,4 +129,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
-  </html>
+</html>

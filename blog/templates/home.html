@@ -43,7 +43,7 @@
   <div class="collapse" style="background: #741d51; /* Old browsers */
   background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(250, 250, 44) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" id="navbarHeader">
     <div class="container">
       <div class="row">
@@ -66,10 +66,10 @@
   <div class="navbar navbar-dark  shadow-sm" style="background: #741d51; /* Old browsers */
   background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(250, 250, 44) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
     <div class="container d-flex justify-content-between">
-      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-dark">
+      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
          <img src="{% static 'logo.png' %}" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
       </a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@
   </section>
   <div class="album py-5 bg-light">
     <div class="container">
-        <H1 class="text-dark mb-3">اخبار:</H1> 
+        <H1 class="text-dark mb-3">Blogs:</H1> 
       <div class="row">
 
         {% for jobs in items.object_list %}
@@ -105,7 +105,7 @@
               <p class="card-text ">{{ jobs.title|upper }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a type="button" href="{% url 'blog' jobs.id %}" role="button" class="btn btn-outline-info my-2">Continue reading</a>
+                  <a type="button" href="{% url 'blogs' jobs.id %}" role="button" class="btn btn-outline-info my-2">Continue reading</a>
                 </div>
                 <small class="text-muted">{{ jobs.date }}</small>
               </div>
@@ -135,8 +135,6 @@
           {% endif %}
         </ul>
     </div>
-
-</main>
 
 <footer class="container py-5">
   <div class="container">
