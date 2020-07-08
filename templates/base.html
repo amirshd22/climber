@@ -14,6 +14,9 @@
 
 
     <style>
+      body{
+        background-color: rgb(240, 235, 235);
+      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -48,16 +51,16 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-dark">ایمن کلایمر:</h4>
-          <p class="text-dark">کلایمر سازه گستر سهند در سال 1378 با هدف گسترش صنعت ساختمان سازی و ترویج استانداردسازی در این صنعت تاسیس گردید و هم اکنون با گذشت بیش از یک دهه از آغاز فعالیت و با در اختیار داشتن نیروی انسانی متخصص و کادر مهندسی مجرب و تجهیزات پیشرفته تولید سعی می نماید گامی هر چند کوچک در راستای آبادانی این دیار کهن بردارد.</p>
+          <h4 class="text-dark text-right">:ایمن کلایمر</h4>
+          <p class="text-dark text-right"> ایمن کلایمر با هدف گسترش صنعت ساختمان سازی و ترویج استانداردسازی در این صنعت تاسیس گردید و از آغاز فعالیت و با در اختیار داشتن نیروی انسانی متخصص و کادر مهندسی مجرب و تجهیزات پیشرفته تولید سعی می نماید گامی هر چند کوچک در راستای آبادانی این دیار کهن بردارد.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Menu:</h4>
-          <ul class="list-unstyled">
+          <h4 class="text-white text-center">Menu:</h4>
+          <ul class="list-unstyled text-right">
             <li><a href="{% url 'home' %}" class="text-white">خانه</a></li>
             <li><a href="{% url 'about' %}" class="text-white">درباره</a></li>
-            <li><a href="{% url 'about' %}" class="text-white">خرید کلایمر</a></li>
-            <li><a href="{% url 'about' %}" class="text-white">اجاره کلایمر</a></li>
+            <li><a href="{% url 'sell' %}" class="text-white">خرید کلایمر</a></li>
+            <li><a href="{% url 'rent' %}" class="text-white">اجاره کلایمر</a></li>
            </ul>
         </div>
       </div>
@@ -70,7 +73,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
     <div class="container d-flex justify-content-between">
       <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
-         <img src="{% static 'logo.png' %}" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
+         <img src="{% static 'logo.png' %}" width="50px" height="25px" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
       </a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon "></span>
@@ -86,7 +89,7 @@
 {% endblock %}
 <br>
 </main>
-<footer class="container py-5">
+<footer class="container py-5 ">
     <div class="container">
       <p class="float-right">
       </p>
@@ -99,16 +102,17 @@
         <small class="d-block mb-3 text-muted"></small>
       </div>
       <div class="col-6 col-md">
-          <h5>تماس با ما</h5>
-          <ul class="list-unstyled text-small">
-             <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
-             <li><p class="text-muted">0919 087 7487: نوری</p></li>
+          <h5 class="text-right">تماس با ما</h5>
+          <ul class="list-unstyled text-small  text-right">
+            <li><p class="text-muted">0919 087 7487: نوری</p></li>
+            <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
   
           </ul>
         </div>
       <div class="col-6 col-md">
-        <h5>منو</h5>
-        <ul class="list-unstyled text-small">
+        <h5 class="text-right">منو</h5>
+        <ul class="list-unstyled text-small text-right">
+          <li><a href="{% url 'home' %}" class="text-muted">خانه</a></li>
           <li><a class="text-muted" href="{% url 'about' %}">درباره ایمن کلایمر</a></li>
           <li><a class="text-muted" href="{% url 'sell' %}">خرید کلایمر</a></li>
           <li><a class="text-muted" href="{% url 'rent' %}">اجاره کلایمر</a></li>
@@ -116,8 +120,9 @@
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>کلایمر چیست</h5>
-        <ul class="list-unstyled text-small">     
+        <h5 class="text-right">کلایمر چیست</h5>
+
+        <ul class="list-unstyled text-small text-right">     
           <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
           <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
         </ul>

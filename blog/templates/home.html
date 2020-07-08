@@ -38,47 +38,45 @@
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
-  <div class="collapse" style="background: #741d51; /* Old browsers */
-  background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-dark">ایمن کلایمر:</h4>
-          <p class="text-dark">کلایمر سازه گستر سهند در سال 1378 با هدف گسترش صنعت ساختمان سازی و ترویج استانداردسازی در این صنعت تاسیس گردید و هم اکنون با گذشت بیش از یک دهه از آغاز فعالیت و با در اختیار داشتن نیروی انسانی متخصص و کادر مهندسی مجرب و تجهیزات پیشرفته تولید سعی می نماید گامی هر چند کوچک در راستای آبادانی این دیار کهن بردارد.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Menu:</h4>
-          <ul class="list-unstyled">
-            <li><a href="{% url 'home' %}" class="text-white">خانه</a></li>
-            <li><a href="{% url 'about' %}" class="text-white">درباره</a></li>
-            <li><a href="{% url 'about' %}" class="text-white">خرید کلایمر</a></li>
-            <li><a href="{% url 'about' %}" class="text-white">اجاره کلایمر</a></li>
-           </ul>
+  <header>
+    <div class="collapse" style="background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-dark text-right">:ایمن کلایمر</h4>
+            <p class="text-dark text-right"> ایمن کلایمر با هدف گسترش صنعت ساختمان سازی و ترویج استانداردسازی در این صنعت تاسیس گردید و از آغاز فعالیت و با در اختیار داشتن نیروی انسانی متخصص و کادر مهندسی مجرب و تجهیزات پیشرفته تولید سعی می نماید گامی هر چند کوچک در راستای آبادانی این دیار کهن بردارد.</p>
+         </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white text-center">Menu:</h4>
+            <ul class="list-unstyled text-right">
+              <li><a href="{% url 'home' %}" class="text-white">خانه</a></li>
+              <li><a href="{% url 'about' %}" class="text-white">درباره</a></li>
+              <li><a href="{% url 'sell' %}" class="text-white">خرید کلایمر</a></li>
+              <li><a href="{% url 'rent' %}" class="text-white">اجاره کلایمر</a></li>
+             </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="navbar navbar-dark  shadow-sm" style="background: #741d51; /* Old browsers */
-  background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
-    <div class="container d-flex justify-content-between">
-      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
-         <img src="{% static 'logo.png' %}" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
-      </a>
-      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
+    <div class="navbar navbar-dark  shadow-sm" style="background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
+      <div class="container d-flex justify-content-between">
+        <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
+           <img src="{% static 'logo.png' %}" width="50px" height="25px" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
+        </a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
 <main role="main">
 
   <section class="jumbotron text-center" id="jump">
@@ -136,47 +134,49 @@
         </ul>
     </div>
 
-<footer class="container py-5">
-  <div class="container">
-    <p class="float-right">
-    </p>
-    <p class="text-muted" > Copyright &copy; {% now "Y" %} emenclimber Company  All rights reserved.</p>
-      </div>
-
-  <div class="row">
-    <div class="col-12 col-md">
-     
-      <small class="d-block mb-3 text-muted"></small>
-    </div>
-    <div class="col-6 col-md">
-        <h5>تماس با ما</h5>
-        <ul class="list-unstyled text-small">
-           <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
-           <li><p class="text-muted">0919 087 7487: نوری</p></li>
-
-        </ul>
-      </div>
-    <div class="col-6 col-md">
-      <h5>منو</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="{% url 'about' %}">درباره ایمن کلایمر</a></li>
-        <li><a class="text-muted" href="{% url 'sell' %}">خرید کلایمر</a></li>
-        <li><a class="text-muted" href="{% url 'rent' %}">اجاره کلایمر</a></li>
-
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>کلایمر چیست</h5>
-      <ul class="list-unstyled text-small">     
-        <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
-        <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
-      </ul>
-    </div>
-  </div>    
-</footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
-</html>
+    <footer class="container py-5 ">
+      <div class="container">
+        <p class="float-right">
+        </p>
+        <p class="text-muted" > Copyright &copy; {% now "Y" %} emenclimber Company  All rights reserved.</p>
+          </div>
+    
+      <div class="row">
+        <div class="col-12 col-md">
+         
+          <small class="d-block mb-3 text-muted"></small>
+        </div>
+        <div class="col-6 col-md">
+            <h5 class="text-right">تماس با ما</h5>
+            <ul class="list-unstyled text-small  text-right">
+              <li><p class="text-muted">0919 087 7487: نوری</p></li>
+              <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
+    
+            </ul>
+          </div>
+        <div class="col-6 col-md">
+          <h5 class="text-right">منو</h5>
+          <ul class="list-unstyled text-small text-right">
+            <li><a href="{% url 'home' %}" class="text-muted">خانه</a></li>
+            <li><a class="text-muted" href="{% url 'about' %}">درباره ایمن کلایمر</a></li>
+            <li><a class="text-muted" href="{% url 'sell' %}">خرید کلایمر</a></li>
+            <li><a class="text-muted" href="{% url 'rent' %}">اجاره کلایمر</a></li>
+    
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="text-right">کلایمر چیست</h5>
+  
+          <ul class="list-unstyled text-small text-right">     
+            <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
+            <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
+          </ul>
+        </div>
+      </div>    
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+  </html>
