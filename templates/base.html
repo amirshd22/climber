@@ -9,8 +9,7 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>ایمن کلایمر</title>
-    <link rel="icon" href="{% static 'logo.png' %}">
-    <!-- Bootstrap core CSS -->
+    <link rel="icon" href="{% static 'deli.png' %}"> <!-- Bootstrap core CSS -->
 
 
     <style>
@@ -42,8 +41,8 @@
     <link href="album.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-  <div class="collapse" style="background: #741d51; /* Old browsers */
+    <header class="fixed-top">
+  <div class="collapse " style="background: #741d51; /* Old browsers */
   background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -66,14 +65,14 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark  shadow-sm" style="background: #741d51; /* Old browsers */
+  <div class="navbar  navbar-dark  shadow-sm" style="background: #741d51; /* Old browsers */
   background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
     <div class="container d-flex justify-content-between">
-      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
-         <img src="{% static 'logo.png' %}" width="50px" height="25px" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
+      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-dark">
+         <img src="{% static 'deli.png' %}" width="50px" height="25px" class="d-inline-block alighn-top mr-3" alt=""> ایمن کلایمر
       </a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon "></span>
@@ -89,7 +88,7 @@
 {% endblock %}
 <br>
 </main>
-<footer class="container py-5 ">
+<footer class="mr-5  py-5">
     <div class="container">
       <p class="float-right">
       </p>
@@ -104,7 +103,7 @@
       <div class="col-6 col-md">
           <h5 class="text-right">تماس با ما</h5>
           <ul class="list-unstyled text-small  text-right">
-            <li><p class="text-muted">0919 087 7487: نوری</p></li>
+            <li><p class="text-muted">0919 087 7487: دلخوش</p></li>
             <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
   
           </ul>
@@ -125,6 +124,28 @@
         <ul class="list-unstyled text-small text-right">     
           <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
           <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 class="text-right text-muted">کلمات کلیدی</h5>
+        <ul class="list-unstyled text-small text-right">
+          <li class="text-muted text-small"><a class="text-muted" href="{% url 'home' %}">کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">ایمن</a>,<a class="text-muted" href="{% url 'home' %}">ایمن کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">climber</a>,<a class="text-muted" href="{% url 'home' %}">حرفه ای</a>
+            <a class="text-muted text-small" href="{% url 'home' %}">کلایمر معمولی</a>,
+            <a class="text-muted text-small" href="{% url 'home' %}">ساخت ایران</a>,
+            <a class="text-muted" href="{% url 'home' %}">جایگزین داربست</a>,
+            <a class="text-muted" href="{% url 'home' %}">خرید کلایمر</a>,
+            <a class="text-muted" href="{% url 'home' %}">اجاره کلایمر</a>,
+            <a class="text-muted" href="{% url 'home' %}">تهران</a>,
+            <a class="text-muted" href="{% url 'home' %}">ایران</a>,
+            <a class="text-muted" href="{% url 'home' %}">کلایمر تهران</a>,
+            <a class="text-muted" href="{% url 'home' %}">کلایمر کرج</a>,
+            <a class="text-muted" href="{% url 'home' %}">کلایمر مشهد</a>,
+            <a class="text-muted" href="{% url 'home' %}">کلایمر شیراز</a>,
+            <a class="text-muted" href="{% url 'home' %}">صادرات کلایمر</a>,
+            <a class="text-muted" href="{% url 'home' %}">صادرات به تمام نقاط جهان</a>,
+            <a class="text-muted" href="{% url 'home' %}">امنیت</a>,
+          </li>
+
         </ul>
       </div>
     </div>    

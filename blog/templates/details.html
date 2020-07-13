@@ -9,8 +9,7 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>{{ key1.title }}</title>
-    <link rel="icon" href="../../static/logo.png">
-    <!-- Bootstrap core CSS -->
+    <link rel="icon" href="{% static 'deli.png' %}"> <!-- Bootstrap core CSS -->
 
 
     <style>
@@ -45,8 +44,8 @@
     <link href="album.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="collapse" style="background: #741d51; /* Old browsers */
+    <header class="fixed-top">
+      <div class="collapse " style="background: #741d51; /* Old browsers */
       background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -75,8 +74,8 @@
       background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
         <div class="container d-flex justify-content-between">
-          <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
-             <img src="{% static 'logo.png' %}" width="50px" height="25px" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
+          <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-dark">
+             <img src="{% static 'deli.png' %}" width="50px" height="25px" class="d-inline-block alighn-top mr-3" alt=""> ایمن کلایمر
           </a>
           <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon "></span>
@@ -88,23 +87,48 @@
     <div class="jumbotron" id='bg'>
         <div class="container">
           <h1 class="display-3 text-white">{{key1.title}}</h1>
-          <p class="">اخبار روزانه با ما</p>
-          <p><a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Back to Home Page &raquo;</a></p>
+          <p class="text-right text-white">ایمن کلایمر بلاگ های روزانه با ایمن کلایمر</p>
+          <p><a class="btn btn-info btn-lg" href="{% url 'home' %}" role="button">بازگشت به صحفه قبل &raquo;</a></p>
         </div>
        
       </div>
-      <div class="container">
-        <img src="{{ key1.img.url }}" class="img img-fluid" alt="img" >
-      </div>
-      <div class="container">
-      <div class="blog-post">
+      <div class="container mb-5">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for i in photos %}
+           <li data-target="#carouselExampleCaptions" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter0 == 0 %}  active {% endif %} "></li>
+           
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner">
+           {% for i in photos %}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}  active {% endif %} ">
+              <img src="{{ i.img.url }}"  class="d-block rounded  w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+               </div>
+            </div>
+            {% endfor %}
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <!--all the information you need for sale-->
+        </div>
+      <div class="">
+      <div class="blog-post mt-5">
         <h2 class="blog-post-title text-right">{{ key1.title }}</h2>
-        <div class="blog-post-meta text-right">{{ key1.text }}</div>
+        <p class="blog-post-meta text-right">{{ key1.text }}</p>
       </div>
     </div>
 </main>
 
-<footer class="container py-5 ">
+<footer class="mr-5  py-5">
   <div class="container">
     <p class="float-right">
     </p>
@@ -119,7 +143,7 @@
     <div class="col-6 col-md">
         <h5 class="text-right">تماس با ما</h5>
         <ul class="list-unstyled text-small  text-right">
-          <li><p class="text-muted">0919 087 7487: نوری</p></li>
+          <li><p class="text-muted">0919 087 7487: دلخوش</p></li>
           <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
 
         </ul>
@@ -140,6 +164,28 @@
       <ul class="list-unstyled text-small text-right">     
         <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
         <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 class="text-right text-muted">کلمات کلیدی</h5>
+      <ul class="list-unstyled text-small text-right">
+        <li class="text-muted text-small"><a class="text-muted" href="{% url 'home' %}">کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">ایمن</a>,<a class="text-muted" href="{% url 'home' %}">ایمن کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">climber</a>,<a class="text-muted" href="{% url 'home' %}">حرفه ای</a>
+          <a class="text-muted text-small" href="{% url 'home' %}">کلایمر معمولی</a>,
+          <a class="text-muted text-small" href="{% url 'home' %}">ساخت ایران</a>,
+          <a class="text-muted" href="{% url 'home' %}">جایگزین داربست</a>,
+          <a class="text-muted" href="{% url 'home' %}">خرید کلایمر</a>,
+          <a class="text-muted" href="{% url 'home' %}">اجاره کلایمر</a>,
+          <a class="text-muted" href="{% url 'home' %}">تهران</a>,
+          <a class="text-muted" href="{% url 'home' %}">ایران</a>,
+          <a class="text-muted" href="{% url 'home' %}">کلایمر تهران</a>,
+          <a class="text-muted" href="{% url 'home' %}">کلایمر کرج</a>,
+          <a class="text-muted" href="{% url 'home' %}">کلایمر مشهد</a>,
+          <a class="text-muted" href="{% url 'home' %}">کلایمر شیراز</a>,
+          <a class="text-muted" href="{% url 'home' %}">صادرات کلایمر</a>,
+          <a class="text-muted" href="{% url 'home' %}">صادرات به تمام نقاط جهان</a>,
+          <a class="text-muted" href="{% url 'home' %}">امنیت</a>,
+        </li>
+
       </ul>
     </div>
   </div>    

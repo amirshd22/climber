@@ -1,20 +1,22 @@
 from django.shortcuts import render , get_object_or_404
-from .models import Blogs 
+from .models import Blogs ,PostImage
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger, InvalidPage
 import random
 
 
 def bl(request, blog_id):
     ob1 = get_object_or_404(Blogs , pk=blog_id)
+    photos = PostImage.objects.filter(post= ob1)
     template = 'details.html'
     context = {
         'key1':ob1,
+        'photos':photos
     }
     return render(request ,template,context)
 
 def homepage(request):
     deli = Blogs.objects.all()
-    paginator = Paginator(deli, 6)
+    paginator = Paginator(deli,6)
     try:
         page = int(request.GET.get('page', '1'))
     except:

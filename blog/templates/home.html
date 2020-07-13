@@ -9,11 +9,14 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>ایمن کلایمر</title>
-    <link rel="icon" href="{% static 'logo.png' %}">
+    <link rel="icon" href="{% static 'deli.png' %}">
     <!-- Bootstrap core CSS -->
 
 
     <style>
+      body{
+        background-color: rgba(245, 245, 245, 0.897);
+      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -39,8 +42,8 @@
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
   </head>
-  <header>
-    <div class="collapse" style="background: #741d51; /* Old browsers */
+  <header class="fixed-top">
+    <div class="collapse " style="background: #741d51; /* Old browsers */
     background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -69,15 +72,17 @@
     background: linear-gradient(to left, rgb(0, 138, 233) 0%, rgb(0, 240, 176) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */">
       <div class="container d-flex justify-content-between">
-        <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-white">
-           <img src="{% static 'logo.png' %}" width="50px" height="25px" class="d-inline-block alighn-top" alt=""> ایمن کلایمر
+        <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-dark">
+           <img src="{% static 'deli.png' %}" width="50px" height="25px" class="d-inline-block alighn-top mr-3" alt="">  ایمن کلایمر
         </a>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon "></span>
+          <span class="navbar-toggler-icon  "></span>
         </button>
       </div>
     </div>
   </header>
+  <br>
+  <br>
 <main role="main">
 
   <section class="jumbotron text-center" id="jump">
@@ -104,7 +109,7 @@
               <p class="card-text ">{{ jobs.title|upper }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a type="button" href="{% url 'blogs' jobs.id %}" role="button" class="btn btn-outline-info my-2">Continue reading</a>
+                  <a type="button" href="{% url 'blogs' jobs.id %}" role="button" class="btn btn-outline-info my-2">ادامه مطلب</a>
                 </div>
                 <small class="text-muted">{{ jobs.date }}</small>
               </div>
@@ -121,21 +126,21 @@
           {% endif %}
           {% for pg in items.paginator.page_range %}
             {% if items.number == pg %}
-              <li class="active page-item"><a class="page-link" href="?page={{ pg }}">{{ pg }}</a></li>
+              <li class="active page-item text-center"><a class="page-link" href="?page={{ pg }}">{{ pg }}</a></li>
             {% else %}
-            <li class="page-item"><a href="?page={{ pg }}" class="page-link">{{ pg }}</a></li>
+            <li class="page-item text-center"><a href="?page={{ pg }}" class="page-link">{{ pg }}</a></li>
             {% endif %}
           {% endfor %}
           {% if items.has_next %}
-            <li class="page-item"><a href="?page={{ items.next_page_number }}" class="page-link">Next</a></li>
-            <li class="page-item"><a href="?page={{ items.paginator.num_pages  }}" class="page-link">Last</a></li>
+            <li class="page-item text-center"><a href="?page={{ items.next_page_number }}" class="page-link">Next</a></li>
+            <li class="page-item text-center"><a href="?page={{ items.paginator.num_pages  }}" class="page-link">Last</a></li>
 
 
           {% endif %}
         </ul>
     </div>
-
-    <footer class="container py-5 ">
+  </main>
+  <footer class="mr-5  py-5">
       <div class="container">
         <p class="float-right">
         </p>
@@ -150,7 +155,7 @@
         <div class="col-6 col-md">
             <h5 class="text-right">تماس با ما</h5>
             <ul class="list-unstyled text-small  text-right">
-              <li><p class="text-muted">0919 087 7487: نوری</p></li>
+              <li><p class="text-muted">0919 087 7487: دلخوش</p></li>
               <li><p class="text-muted">0990 687 3238: دلخوش</p></li>
     
             </ul>
@@ -171,6 +176,28 @@
           <ul class="list-unstyled text-small text-right">     
             <li><p class="text-muted">بهترین گزینه برای ایمن کردن کارگران خود</p></li>
             <li><p class="text-muted">بهترین جایگزین داربست بدون خطر سقوط</p></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="text-right text-muted">کلمات کلیدی</h5>
+          <ul class="list-unstyled text-small text-right">
+            <li class="text-muted text-small"><a class="text-muted" href="{% url 'home' %}">کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">ایمن</a>,<a class="text-muted" href="{% url 'home' %}">ایمن کلایمر</a>,<a class="text-muted" href="{% url 'home' %}">climber</a>,<a class="text-muted" href="{% url 'home' %}">حرفه ای</a>
+              <a class="text-muted text-small" href="{% url 'home' %}">کلایمر معمولی</a>,
+              <a class="text-muted text-small" href="{% url 'home' %}">ساخت ایران</a>,
+              <a class="text-muted" href="{% url 'home' %}">جایگزین داربست</a>,
+              <a class="text-muted" href="{% url 'home' %}">خرید کلایمر</a>,
+              <a class="text-muted" href="{% url 'home' %}">اجاره کلایمر</a>,
+              <a class="text-muted" href="{% url 'home' %}">تهران</a>,
+              <a class="text-muted" href="{% url 'home' %}">ایران</a>,
+              <a class="text-muted" href="{% url 'home' %}">کلایمر تهران</a>,
+              <a class="text-muted" href="{% url 'home' %}">کلایمر کرج</a>,
+              <a class="text-muted" href="{% url 'home' %}">کلایمر مشهد</a>,
+              <a class="text-muted" href="{% url 'home' %}">کلایمر شیراز</a>,
+              <a class="text-muted" href="{% url 'home' %}">صادرات کلایمر</a>,
+              <a class="text-muted" href="{% url 'home' %}">صادرات به تمام نقاط جهان</a>,
+              <a class="text-muted" href="{% url 'home' %}">امنیت</a>,
+            </li>
+  
           </ul>
         </div>
       </div>    
